@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+ <head>
+  <meta charset="utf-8">
+  <title>EncuentraExpertos.com</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  
+  </head>
+
+ <body>
+    <script src="app.js"></script>
+    <header>
+        <div class="menu-container">
+         <button class="dropdown-btn">MENÚ</button>
+         <div class="dropdown-content">
+           <a href="EncuentraExpertos.html">Inicio</a>
+           <a href="blog.html">Blog</a>
+           <a href="contacto.html">Contacto</a>
+           <a href="nosotros.html">Sobre nosotros</a>
+         </div>
+       </div>
+
+       <script>
+           document.addEventListener("DOMContentLoaded", function() {
+             var dropdownBtn = document.querySelector('.dropdown-btn');
+             dropdownBtn.addEventListener('click', function() {
+               this.nextElementSibling.classList.toggle('show');
+             });
+           });
+           </script>
+           
+   </header>
+
+    <h1>Nuestros valores:</h1>
+    <p class="valores">Confianza y seguridad</p>
+    <p class="valores">Calidad y excelencia</p>
+    <p class="valores">Innovación y compromiso con la comunidad</p>
+    <p class="valores">Valoraciones reales</p>
+
+
+
+
+
+<div class="contenedor">
+    <h1>Déjanos tu opinión</h1>
+    <div class="star-rating">
+        <input type="radio" id="5-stars" name="rating" value="5" />
+        <label for="5-stars" class="star">&#9733;</label>
+        <input type="radio" id="4-stars" name="rating" value="4" />
+        <label for="4-stars" class="star">&#9733;</label>
+        <input type="radio" id="3-stars" name="rating" value="3" />
+        <label for="3-stars" class="star">&#9733;</label>
+        <input type="radio" id="2-stars" name="rating" value="2" />
+        <label for="2-stars" class="star">&#9733;</label>
+        <input type="radio" id="1-star" name="rating" value="1" />
+        <label for="1-star" class="star">&#9733;</label>
+      </div>
+  
+    <div id="expertForm">
+      <input type="text" id="nombre" placeholder="Nombre del Experto">
+      <textarea id="reseña" placeholder="Escribe una reseña"></textarea>
+      <button onclick="guardarExperto()">Guardar</button>
+  </div>
+  <div id="expertosGuardados">
+  </div>
+
+ </body>
+
+</html>

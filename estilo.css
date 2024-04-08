@@ -1,0 +1,225 @@
+@media only screen and (max-width: 600px) {
+  
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  
+}
+
+
+body html {
+  background-color: #0056b3;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  background-color: #0e0e6a; 
+  color: white; 
+  padding: 10px 20px; 
+  border: none; 
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.dropdown-content {
+  display: none; 
+  position: absolute;
+  background-color: #053292; 
+  min-width: 160px; 
+}
+
+.dropdown-content a {
+  color: whitesmoke; 
+  padding: 12px 16px; 
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #40c2e6; 
+}
+
+.show {
+  display: block;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color:#0e0e6a;
+}
+
+
+.bienvenidos{
+    text-align: center;
+    font-family:Arial, sans-serif; 
+    font-size: 18px;
+    color: blue;
+    margin: 0;
+    display: inline-block;
+}
+
+.valores{
+  text-align: center;
+  font-family:Arial, sans-serif; 
+  font-size: 18px;
+  color: blue;
+  margin-top:50px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 40px;
+}
+
+#buscar form input[type="text"],
+#registro form input[type="text"],
+#registro form input[type="email"]
+#regiatro form input[type="número"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#buscar form button,
+#registro form button {
+  padding: 10px 20px;
+  background-color:#007bff;
+  color: #fff;
+  border: none;
+}
+
+#buscar form button:hover,
+#registro form button:hover {
+  background-color:#007bff;
+}
+
+.resultados {
+  margin-top: 20px;
+}
+ 
+ 
+ body {
+  font-family: Arial, sans-serif;
+  background-color:white;
+}
+header {
+  background-image: url("C:\Users\Jennifer\Desktop\PROYECTO DAW\Imagen1.jpg"); 
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  padding-top: 50px; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100px; 
+  padding: 10px
+}
+
+/*.nombre-sitio {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: rgb(225, 70, 181); 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}*/
+ .bienvenidos {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 200;
+  color:rgb(57, 57, 237);
+
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  color:rgb(57, 57, 237);
+}
+
+.star-rating {
+  direction:left; 
+  font-size: 0;
+}
+
+.star-rating input[type="radio"] {
+  display: none; 
+}
+
+.star-rating label {
+  display: inline-block;
+  font-size: 36px; 
+  color: #ccc; 
+  cursor: pointer;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type="radio"]:checked ~ label {
+  color: gold; 
+}
+
+.contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 600px; 
+  margin-top: 150px;
+}
+
+/*Footer*/
+
+footer {
+  background-color:#007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}

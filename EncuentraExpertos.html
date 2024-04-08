@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+ <head>
+  <meta charset="utf-8">
+  <title>EncuentraExpertos.com</title>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+
+ <body>
+
+<script src="app.js"></script>
+
+  <!--Header-->
+
+  <header>
+
+    <div class="menu-container">
+      <button class="dropdown-btn">MENÚ</button>
+      <div class="dropdown-content">
+        <a href="EncuentraExpertos.html">Inicio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="nosotros.html">Sobre nosotros</a>
+      </div>
+    </div>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdownBtn = document.querySelector('.dropdown-btn');
+      dropdownBtn.addEventListener('click', function() {
+        this.nextElementSibling.classList.toggle('show');
+      });
+    });
+    </script>
+    
+  </header>
+
+        <img class="Imagen1" src="C:\Users\Jennifer\Desktop\PROYECTO DAW\Imagen1.jpg" alt="Imagen expertos">
+    
+        <h1 class="bienvenidos">Si estás buscando solucionar un problema específico o eres un experto en tu campo buscando expandir tu alcance, esta es tu plataforma. Conéctate y descubre lo que podemos lograr juntos.</h1>
+        <h1 class="bienvenidos">La plataforma «Encuentra Expertos » nació por la pasión de facilitar el acceso a servicios de calidad en base  las necesidades de cada uno. </h1> 
+  
+
+   <!--Encabezado-->
+  
+
+
+  <form onsubmit="buscarConChatGPT(); return false;">
+  <button type="submit">Inicio</button>
+  </form> 
+
+<div id="resultado"></div>
+</div>
+
+
+ <!--Contenido-->
+
+
+<section id="buscar">
+  <h2>Buscar Profesionales</h2>
+  <form action="#" id="search-form">
+    <input type="text"id="search-input" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
+    <button type="submit" id="search-button">Buscar</button>
+  </form>
+  <div class="resultados">  <a href="profesionales.html">Resultados</a>
+  
+
+<section id="registro">
+  <h2>Registro de Profesionales</h2>
+  <form>
+    <input type="text" placeholder="Nombre completo">
+    <input type="email" placeholder="Correo electrónico">
+    <input type="número" placeholder="Número Teléfono">
+    <input type="text" placeholder="Habilidades">
+    <button type="submit">Registrarse</button> <a href="perfil.html">Registro</a>
+  
+  </form>
+</section>
+
+ <!--Footer-->
+
+<footer id="contacto">
+  <h2>Contacto</h2>
+  <p>Correo electrónico: info@encuentraexpertos.com</p>
+  <p>Teléfono:645006080</p>
+</footer>
+
+
+
+ </body>
+</html>
