@@ -15,14 +15,13 @@ body html {
 
 
 .menu-container {
-  position: relative;
+ position: relative;
   display: inline-block;
 }
-
 .dropdown-btn {
   background-color: #0e0e6a; 
   color: white; 
-  padding: 10px 20px; 
+  padding: 40px 40px; 
   border: none; 
   cursor: pointer;
   font-size: 20px;
@@ -64,12 +63,24 @@ h2 {
 
 .bienvenidos{
     text-align: center;
-    font-family:Arial, sans-serif; 
-    font-size: 18px;
-    color: blue;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 33px;
+    color:rgb(57, 57, 237);
     margin: 0;
     display: inline-block;
+    font-weight: 200;
+    padding: 20px;
 }
+
+ .Imagen1{
+  vertical-align: middle;
+  display: inline-block;
+  height: auto;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+ }
 
 .valores{
   text-align: center;
@@ -167,13 +178,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 2px;
 }*/
- .bienvenidos {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
-  font-size: 56px;
-  font-weight: 200;
-  color:rgb(57, 57, 237);
-
-}
+ 
 
 h1 {
   display: block;
