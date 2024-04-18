@@ -1,87 +1,33 @@
 
 
-function guardar_localstorage(){
-    let profesional={
-        Nombre:"Fernando",
-    }
+// Datos iniciales de expertos
+const expertosIniciales = [
+    { nombre: "Ángel Luis Pérez García", especialidad: "Médico General", tarifa: "50€", disponibilidad:"Lunes a Viernes, de 8:00 a 15:00", dirección:"Calle Gran Vía, 1, 28013, Madrid, España" },
+    { nombre: "Ana Gómez Juarez", especialidad: "Abogada", tarifa: "50€", disponibilidad:"Lunes a Viernes, de 8:00 a 15:00", dirección:"Calle Serrano Ochoa, 25, 28013, Madrid, España" },
+    { nombre: "Carlos Ruiz González", especialidad: "Veterinario", tarifa: "30€", disponibilidad:"Lunes a Viernes, de 8:00 a 15:00 y de 17:00 a 20:00", dirección:"Calle Pedr Luengo, 3, 10500, Talayuela, Extremadura, España" },
+];
 
-
-
-
-    localStorage.setItem("profesional", nombre)
+if (!localStorage.getItem('expertos')) {
+    localStorage.setItem('expertos', JSON.stringify(expertosIniciales));
 }
 
-// Función para guardar el experto en localStorage
-function guardarExperto() {
-    var nombre = document.getElementById("nombre").value;
-    var reseña = document.getElementById("reseña").value;
+function buscarExperto() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const expertos = JSON.parse(localStorage.getItem('expertos'));
+   // const resultado = expertos.filter(experto => experto.nombre.toLowerCase().includes(input));
+    const resultado = expertos.filter((experto) => experto.especialidad.toLowerCase().includes(input));
 
-    if (nombre.trim() !== "" && reseña.trim() !== "") {
-        var experto = {
-            nombre: nombre,
-            reseña: reseña
-        };
+    const displayArea = document.getElementById('resultado');
+    displayArea.innerHTML = ''; 
 
-        // Obtener expertos previamente guardados o inicializar un array vacío
-        var expertosGuardados = JSON.parse(localStorage.getItem("expertos")) || [];
-        // Agregar el nuevo experto al array
-        expertosGuardados.push(experto);
-        // Guardar el array actualizado en localStorage
-        localStorage.setItem("expertos", JSON.stringify(expertosGuardados));
-
-        // Limpiar los campos del formulario
-        document.getElementById("nombre").value = "";
-        document.getElementById("reseña").value = "";
-
-        // Actualizar la lista de expertos mostrada en la página
-        mostrarExpertos();
-    } else {
-        alert("Por favor, introduce el nombre del experto y una reseña.");
-    }
-}
-
-// Función para mostrar los expertos almacenados en localStorage
-function mostrarExpertos() {
-    var expertosGuardados = JSON.parse(localStorage.getItem("expertos")) || [];
-
-    var expertosHTML = "";
-    for (var i = 0; i < expertosGuardados.length; i++) {
-        expertosHTML += "<div>";
-        expertosHTML += "<h3>" + expertosGuardados[i].nombre + "</h3>";
-        expertosHTML += "<p>" + expertosGuardados[i].reseña + "</p>";
-        expertosHTML += "</div>";
-    }
-
-    document.getElementById("expertosGuardados").innerHTML = expertosHTML;
-}
-
-// Mostrar los expertos al cargar la página
-mostrarExpertos();
-
-$(document).ready(function() {
-    // Obtener reseñas del profesional con AJAX
-    $.ajax({
-        url: 'obtener_reseñas.php',
-        method: 'GET',
-        data: { id_profesional: 123 }, // ID del profesional
-        success: function(reseñas) {
-            // Mostrar reseñas en el elemento con id "reseñas"
-            $('#reseñas').html(reseñas);
-        },
-        error: function() {
-            console.log('Error al obtener las reseñas del profesional.');
-        }
+    resultado.forEach(expertosIniciales => {
+        const div = document.createElement('div');
+        div.innerHTML = `<h2>${experto.nombre}</h2><p>Especialidad: ${experto.especialidad}</p><p>Tarifa: ${experto.tarifa}</p><p>Disponibilidad: ${experto.disponibilidad}</p><p>Dirección: ${experto.dirección}`
+        displayArea.appendChild(div);
     });
-});
 
-/*Redirigir búsqueda profesionales*/ 
+    if (resultado.length === 0) {
+        displayArea.innerHTML = '<p>No se encontraron expertos.</p>';
+    }
+}
 
-document.getElementById("search-form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
-    
-    var searchTerm = document.getElementById("search-input").value;
-    
-    var redirectURL = "file:///C:/Users/Jennifer/Desktop/PROYECTO%20DAW/profesionales.html" + encodeURIComponent(searchTerm);
-    
-    window.location.href = redirectURL;
-});

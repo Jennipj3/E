@@ -27,34 +27,18 @@
     </div>
  
     
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var dropdownBtn = document.querySelector('.dropdown-btn');
-      dropdownBtn.addEventListener('click', function() {
-        this.nextElementSibling.classList.toggle('show');
-      });
-    });
-    </script>
-    
   </header>
+
+    <!--Cuerpo-->
 
         <h1 class="bienvenidos">Si estás buscando solucionar un problema específico o eres un experto en tu campo buscando expandir tu alcance, esta es tu plataforma.</h1>
        
         <img class="Imagen1" src="C:\Users\Jennifer\Desktop\PROYECTO DAW\Imagen1.jpg" alt="Imagen expertos">
     
-        
-  
-
-   <!--Cuerpo-->
-  
-
-
-  <form onsubmit="buscarConChatGPT(); return false;">
+      
+  <form onsubmit="volverinicio(); return false;">
   <button type="submit">Inicio</button>
   </form> 
-
-<div id="resultado"></div>
-</div>
 
 
  <!--Contenido-->
@@ -65,8 +49,19 @@
   <form action="#" id="search-form">
     <input type="text"id="search-input" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
     <button type="submit" id="search-button">Buscar</button>
+    <div class="resultados"></div>
+    <script src="app.js"></script>
   </form>
-  <div class="resultados">  <a href="profesionales.html">Resultados</a>
+ 
+  <a href="profesionales.html">Resultados</a>
+
+  <h2>Buscar Profesionales</h2>
+  <input type="text" id="searchInput" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
+  <button onclick="buscarExperto()">Buscar</button>
+  <div id="resultado"></div>
+
+  <script src="app.js"></script>
+
   
 
 <section id="registro">
