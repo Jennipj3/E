@@ -14,7 +14,7 @@ if (!localStorage.getItem('expertos')) {
 function buscarExperto() {
     const input = document.getElementById('searchInput').value.toLowerCase();
     const expertos = JSON.parse(localStorage.getItem('expertos'));
-   // const resultado = expertos.filter(experto => experto.nombre.toLowerCase().includes(input));
+    const resultado = expertos.filter(experto => experto.nombre.toLowerCase().includes(input));
     const resultado = expertos.filter((experto) => experto.especialidad.toLowerCase().includes(input));
 
     const displayArea = document.getElementById('resultado');

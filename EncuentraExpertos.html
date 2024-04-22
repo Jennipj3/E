@@ -10,71 +10,70 @@
 
  <body>
 
-<script src="app.js"></script>
 
   <!--Header-->
 
   <header>
-
     <div class="menu-container">
-      <button class="dropdown-btn">MENÚ</button>
-      <div class="dropdown-content">
-        <a href="EncuentraExpertos.html">Inicio</a>
-        <a href="blog.html">Blog</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="nosotros.html">Sobre nosotros</a>
-      </div>
-    </div>
- 
-    
-  </header>
+     <button class="dropdown-btn">MENÚ</button>
+     <div class="dropdown-content">
+       <a href="EncuentraExpertos.html">Inicio</a>
+       <a href="blog.html">Blog</a>
+       <a href="contacto.html">Contacto</a>
+       <a href="nosotros.html">Sobre nosotros</a>
+     </div>
+   </div>
+</header>
+
+<section>
 
     <!--Cuerpo-->
-
+    
         <h1 class="bienvenidos">Si estás buscando solucionar un problema específico o eres un experto en tu campo buscando expandir tu alcance, esta es tu plataforma.</h1>
        
-        <img class="Imagen1" src="C:\Users\Jennifer\Desktop\PROYECTO DAW\Imagen1.jpg" alt="Imagen expertos">
+        <img class="Imagen1" src="Imagen1.jpg" alt="Imagen expertos">
     
       
   <form onsubmit="volverinicio(); return false;">
   <button type="submit">Inicio</button>
   </form> 
+</section>
 
-
- <!--Contenido-->
-
+<!--Borrar uno de los 2 buscadores-->
 
 <section id="buscar">
   <h2>Buscar Profesionales</h2>
-  <form action="#" id="search-form">
-    <input type="text"id="search-input" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
+  <form action="buscarExperto" id="search-form">
+    <input type="text" id="search-input" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
     <button type="submit" id="search-button">Buscar</button>
     <div class="resultados"></div>
-    <script src="app.js"></script>
   </form>
- 
   <a href="profesionales.html">Resultados</a>
+</section>
+ 
+ 
 
-  <h2>Buscar Profesionales</h2>
+  <section id="buscar">
+    <h2>Buscar Profesionales</h2>
   <input type="text" id="searchInput" placeholder="¿A qué profesional necesitas? Escríbelo aquí...">
   <button onclick="buscarExperto()">Buscar</button>
   <div id="resultado"></div>
+  <div id="listaExpertos"></div>
+  </section>
 
-  <script src="app.js"></script>
-
-  
 
 <section id="registro">
   <h2>Registro de Profesionales</h2>
   <form>
     <input type="text" placeholder="Nombre completo">
     <input type="email" placeholder="Correo electrónico">
-    <input type="número" placeholder="Número Teléfono">
+    <input type="number" placeholder="Número Teléfono">
     <input type="text" placeholder="Habilidades">
     <button type="submit">Registrarse</button> <a href="perfil.html">Registro</a>
   
   </form>
 </section>
+
 
  <!--Footer-->
 
@@ -84,7 +83,7 @@
   <p>Teléfono:645006080</p>
 </footer>
 
-
+<script src="app.js"></script>
 
  </body>
 </html>
