@@ -23,6 +23,16 @@
        <a href="nosotros.html">Sobre nosotros</a>
      </div>
    </div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var dropdownBtn = document.querySelector('.dropdown-btn');
+      dropdownBtn.addEventListener('click', function() {
+        this.nextElementSibling.classList.toggle('show');
+      });
+    });
+    </script>
+    
 </header>
 
 <section>
@@ -39,8 +49,7 @@
   </form> 
 </section>
 
-<!--Borrar uno de los 2 buscadores-->
-
+<!--Borrar uno de los 2 buscadores
 <section id="buscar">
   <h2>Buscar Profesionales</h2>
   <form action="buscarExperto" id="search-form">
@@ -50,7 +59,7 @@
   </form>
   <a href="profesionales.html">Resultados</a>
 </section>
- 
+ -->
  
 
   <section id="buscar">
