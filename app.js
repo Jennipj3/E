@@ -14,14 +14,14 @@ const expertosIniciales = [
     tarifa: "50€",
      disponibilidad:"Lunes a Viernes, de 8:00 a 15:00", 
      dirección:"Calle Serrano Ochoa, 25, 28013, Madrid, España",
-     teléfono: "912556879"},
+     teléfono: "912556879",},
 
     { nombre: "Carlos Ruiz González",
      especialidad: "Veterinario",
      tarifa: "30€",
      disponibilidad:"Lunes a Viernes, de 8:00 a 15:00 y de 17:00 a 20:00", 
     dirección:"Calle Pedr Luengo, 3, 10500, Talayuela, Extremadura, España",
-    teléfono: "685497219"},
+    teléfono: "685497219",},
 ];
 
 if (!localStorage.getItem('expertos')) {
@@ -51,21 +51,7 @@ function buscarExperto() {
         displayArea.appendChild(div);
     });
 
-    function programarCita(nombreExperto) {
-        // Aquí puedes mostrar un formulario o una ventana modal para que el usuario ingrese los detalles de la cita
-        // Por ejemplo:
-        const fecha = prompt("Ingrese la fecha de la cita (DD/MM/AAAA):");
-        const hora = prompt("Ingrese la hora de la cita (HH:MM):");
     
-        // Aquí puedes guardar la cita en una base de datos o en otra estructura de datos
-        // Por ejemplo:
-        const cita = {
-            nombreExperto: nombreExperto,
-            fecha: fecha,
-            hora: hora
-        };
-        // Aquí puedes manejar la lógica para guardar la cita
-    }
 
     if (resultado.length === 0) {
         displayArea.innerHTML = '<p>No se encontraron expertos.</p>';
