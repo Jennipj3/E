@@ -61,7 +61,7 @@
 
 <section id="registro">
   <h2>Registro de Profesionales</h2>
-  <form id="formRegistro" onsubmit="registrarProfesional(); return false;">
+  <form id="formRegistro" onsubmit="guardarExperto(); return false;">
     <input type="text" id="nombre" placeholder="Nombre completo" required>
     <input type="text" id="especialidad" placeholder="Especialidad" required>
     <input type="number" id="tarifa" placeholder="Tarifa" required>
@@ -70,15 +70,8 @@
     <input type="number" id="telefono" placeholder="Telefono" required>
     <input type="email" id="correo" placeholder="Correo" required>
     <input type="text" id="reseña" placeholder="Reseña" required>
-    <button type="submit">Registrarse</button>
-  <!--<form>
-    <input type="text" placeholder="Nombre completo">
-    <input type="email" placeholder="Correo electrónico">
-    <input type="number" placeholder="Número Teléfono">
-    <input type="text" placeholder="Habilidades">
-    <button type="submit">Registrarse</button> <a href="perfil.html">Registro</a>
-  
-  </form>-->
+    <button onclick="guardarExperto()">Registrarse</button>
+ 
 </section>
 
 
