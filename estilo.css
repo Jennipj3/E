@@ -195,6 +195,38 @@ section {
   margin-top: 150px;
 }
 
+/*Página 3 Contacto*/
+.formulario-quejas {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario-quejas label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formulario-quejas input,
+.formulario-quejas textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.formulario-quejas button {
+  padding: 10px 20px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 /*Footer*/
 
 footer {

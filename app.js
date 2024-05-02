@@ -9,7 +9,7 @@ const expertosIniciales = [
      dirección:"Calle Gran Vía, 1, 28013, Madrid, España",
     telefono:"645857126",
     correo:"docalperez@gmail.com",
-    reseña:"El doctor Ángel Luis es una excelencia en su especialidad. Trato inmejorable, tanto personal como profesionalmente.",
+    resena:"El doctor Ángel Luis es una excelencia en su especialidad. Trato inmejorable, tanto personal como profesionalmente.",
 },
 
     { nombre: "Ana Gómez Juarez", 
@@ -27,7 +27,7 @@ const expertosIniciales = [
     dirección:"Calle Pedro Luengo, 3, 10500, Talayuela, Extremadura, España",
     telefono: "685497219",
     correo: "carlosruizvet@gmail.com",
-    reseña: "Carlos es un experto compasivo y dedicado.",
+    resena: "Carlos es un experto compasivo y dedicado.",
 },
 ];
 
@@ -54,9 +54,9 @@ function buscarExperto() {
         <p>Tarifa: ${experto.tarifa}</p>
         <p>Disponibilidad: ${experto.disponibilidad}</p>
         <p>Dirección: ${experto.dirección}</p>
-        <p>Teléfono: ${experto.telefono}</p>
+        <p>Telef<ono: ${experto.telefono}</p>
         <p>Correo: ${experto.correo}</p> 
-        <p>Reseña: ${experto.reseña}</p> `
+        <p>Reseña: ${experto.resena}</p> `
         displayArea.appendChild(div);
     });
 
@@ -88,7 +88,7 @@ function registrarProfesional() {
       dirección: dirección,
       telefono: telefono,
       correo: correo,
-      reseña: reseña,
+      resena: resena,
       
     };
   
@@ -101,9 +101,70 @@ function registrarProfesional() {
     // Guardar la lista actualizada en el localStorage
     localStorage.setItem('expertos', JSON.stringify(profesionales));
   
-    // Limpiar el formulario
+   
     document.getElementById('formRegistro').reset();
   
-    // Opcional: Mostrar un mensaje de éxito o actualizar la interfaz
     alert('Profesional registrado con éxito!');
   }
+
+  //Página 2 Blog
+  function guardarExperto() {
+    // Obtener los valores de los inputs
+    var nombreExperto = document.getElementById('nombre').value;
+    var reseñaExperto = document.getElementById('reseña').value;
+    var ratingExperto = document.querySelector('input[name="rating"]:checked')?.value; // Captura el valor del radio button seleccionado
+  
+    // Crear un objeto para guardar la información del experto
+    var experto = {
+      nombre: nombreExperto,
+      reseña: reseñaExperto,
+      rating: ratingExperto
+    };
+  
+    // Leer los expertos ya guardados del localStorage
+    var expertosGuardados = JSON.parse(localStorage.getItem('expertos')) || [];
+  
+    // Añadir el nuevo experto
+    expertosGuardados.push(experto);
+  
+    // Guardar el arreglo actualizado en el localStorage
+    localStorage.setItem('expertos', JSON.stringify(expertosGuardados));
+  
+    
+    document.getElementById('nombre').value = '';
+    document.getElementById('reseña').value = '';
+    if (ratingExperto) {
+      document.querySelector('input[name="rating"]:checked').checked = false;
+    }
+  
+    alert('Opinión guardada con éxito');
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var saveButton = document.querySelector('button');
+    saveButton.onclick = guardarExperto; 
+  });
+
+  //Página 3 Contacto
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('formQuejas');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevenir el envío tradicional del formulario
+
+        // Crear un objeto con los datos del usuario
+        var datos = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            mensaje: document.getElementById('mensaje').value,
+            fecha: new Date().toISOString() // Guardar la fecha y hora de envío
+        };
+
+        // Obtener el arreglo actual de quejas desde el localStorage o inicializarlo si no existe
+        var quejas = JSON.parse(localStorage.getItem('quejas')) || [];
+        quejas.push(datos); 
+        localStorage.setItem('quejas', JSON.stringify(quejas)); 
+
+        alert('Gracias por tu mensaje. ¡Lo valoramos mucho!');
+        form.reset(); 
+    });
+});

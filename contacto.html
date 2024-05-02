@@ -9,7 +9,6 @@
   </head>
 
  <body>
-    <script src="app.js"></script>
 
     <header>
          <div class="menu-container">
@@ -36,20 +35,31 @@
     <h1>Nos puedes encontrar en la siguiente dirección:</h1>
     <p class="valores">Plaza los Reyes Magos, 11, Madrid</p>
 
+    <div class="formulario-quejas">
+      <h1>Si quieres hacernos llegar alguna duda o sugerencia, hágalo a través de este formulario. Contactaremos con usted con la mayor brevedad posible.</h1>
+      <form id="formQuejas">
+          <label for="nombre">Tu nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+          
+          <label for="email">Tu email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+          
+          <button type="submit">Enviar</button>
+      </form>
+  </div>
 
-    <h1> Si quieres hacernos llegar alguna duda o sugerencia, hágalo a través de este formulario. Contactaremos con usted con la mayor brevedad posible.</h1>
-   
 
-   
-
-    aquí aparecerá la dirección de la empresa y aparecerá un formulario para que todos los usuarios puedan mostrar sus sugerencias, quejas, etc. 
 
     <footer id="contacto">
       <h2>Contacto</h2>
       <p>Correo electrónico: info@encuentraexpertos.com</p>
       <p>Teléfono:645006080</p>
     </footer>
-
+    
+    <script src="app.js"></script>
  </body>
 
 </html>
