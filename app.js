@@ -10,7 +10,7 @@ const expertosIniciales = [
     telefono:"645857126",
     correo:"docalperez@gmail.com",
     resena:"El doctor Ángel Luis es una excelencia en su especialidad. Trato inmejorable, tanto personal como profesionalmente.",
-},
+    },
 
     { nombre: "Ana Gómez Juarez", 
     especialidad: "Abogada", 
@@ -18,7 +18,8 @@ const expertosIniciales = [
      disponibilidad:"Lunes a Viernes, de 8:00 a 15:00", 
      direccion:"Calle Serrano Ochoa, 25, 28013, Madrid, España",
      telefono: "912556879",
-     correo:"bufanagomez@gmail.com"},
+     correo:"bufanagomez@gmail.com",
+    },
 
     { nombre: "Carlos Ruiz González",
      especialidad: "Veterinario",
@@ -28,8 +29,8 @@ const expertosIniciales = [
     telefono: "685497219",
     correo: "carlosruizvet@gmail.com",
     resena: "Carlos es un experto compasivo y dedicado.",
-},
-];
+    },
+    ];
 
 if (!localStorage.getItem('expertos')) {
     localStorage.setItem('expertos', JSON.stringify(expertosIniciales));
@@ -42,7 +43,7 @@ else {
 function buscarExperto() {
     const input = document.getElementById('searchInput').value.toLowerCase();
     const expertos = JSON.parse(localStorage.getItem('expertos'));
-    const resultado = expertos.filter((experto) => experto.especialidad.toLowerCase().includes(input));
+    const resultado = expertosIniciales.filter((experto) => experto.especialidad.toLowerCase().includes(input));
 
     const displayArea = document.getElementById('resultado');
     displayArea.innerHTML = ''; 
@@ -56,7 +57,7 @@ function buscarExperto() {
         <p>Dirección: ${experto.direccion}</p>
         <p>Telef<ono: ${experto.telefono}</p>
         <p>Correo: ${experto.correo}</p> 
-        <p>Reseña: ${experto.resena}</p> `
+        <p>Reseña: ${experto.resena || 'No hay reseña disponible'}</p> `;
         displayArea.appendChild(div);
     });
 
@@ -68,7 +69,7 @@ function buscarExperto() {
 }
 
 //Registro profesionales
-function guardarExperto() {
+function registrarProfesional() {
     // Obtener los valores del formulario
     var nombre = document.getElementById('nombre').value;
     var especialidad = document.getElementById('especialidad').value;
@@ -88,7 +89,7 @@ function guardarExperto() {
       direccion: direccion,
       telefono: telefono,
       correo: correo,
-      resena: resena,
+      resena: resena || '',
       
     };
   
@@ -106,6 +107,13 @@ function guardarExperto() {
   
     alert('Profesional registrado con éxito!');
   }
+  
+document.getElementById('expertosIniciales').addEventListener('click', buscarExperto);
+
+document.addEventListener('DOMContentLoaded', function() {
+    var saveButton = document.querySelector('button');
+    saveButton.onclick = registrarProfesional; 
+});
 
   //Página 2 Blog
   function guardarExperto() {
@@ -156,7 +164,7 @@ function guardarExperto() {
             nombre: document.getElementById('nombre').value,
             email: document.getElementById('email').value,
             mensaje: document.getElementById('mensaje').value,
-            fecha: new Date().toISOString() // Guardar la fecha y hora de envío
+            fecha: new Date().toISOString()
         };
 
        

@@ -154,17 +154,7 @@ section {
   margin-top: 20px;
 }
  
- 
 
-
-/*.nombre-sitio {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 32px;
-  color: rgb(225, 70, 181); 
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}*/
  
 
 
@@ -189,10 +179,14 @@ section {
 }
 
 .contenedor {
-  position: relative;
-  width: 100%;
-  max-width: 600px; 
+
+  width: 300%;
+  height: 200px;
+  max-width: 600px;
   margin-top: 150px;
+  margin:auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 /*Página 3 Contacto*/
